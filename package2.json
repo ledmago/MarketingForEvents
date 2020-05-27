@@ -12,7 +12,6 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "@expo/samples": "^3.0.3",
     "@expo/vector-icons": "~10.0.6",
     "@react-native-community/masked-view": "0.1.6",
     "@react-navigation/bottom-tabs": "^5.3.1",
@@ -25,28 +24,28 @@
     "expo-linking": "^1.0.1",
     "expo-splash-screen": "^0.2.3",
     "expo-web-browser": "~8.2.0",
-    "firebase": "^7.2.2",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
-    "react-insta-stories": "^1.5.2",
     "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.1.tar.gz",
-    "react-native-elements": "^1.2.7",
-    "react-native-enhanced-popup-menu": "^0.6.1",
-    "react-native-firebase": "^5.6.0",
-    "react-native-gesture-handler": "^1.6.1",
-    "react-native-keyboard-aware-scrollview": "^2.1.0",
-    "react-native-material-ripple": "^0.9.1",
-    "react-native-modalbox": "^2.0.0",
-    "react-native-popup-menu": "^0.15.7",
-    "react-native-reanimated": "^1.9.0",
+    "react-native-gesture-handler": "~1.6.0",
     "react-native-safe-area-context": "0.7.3",
     "react-native-screens": "~2.2.0",
+    "react-native-web": "~0.11.7",
+    
+
+
+    "firebase": "^7.2.2",
+    "react-insta-stories": "^1.5.2",
+    "react-native-elements": "^1.2.7",
+    "react-native-enhanced-popup-menu": "^0.6.1",
+    "react-native-keyboard-aware-scrollview": "^2.0.0",
+    "react-native-material-ripple": "^0.9.1",
+    "react-native-modalbox": "^2.0.0",
+    "react-native-popup-menu": "^0.15.6",
     "react-native-story": "^0.1.3",
     "react-native-table-component": "^1.2.1",
-    "react-native-text-ticker": "^1.3.0",
-    "react-native-web": "~0.11.7",
-    "react-navigation": "^3.13.0",
-    "react-navigation-stack": "^2.5.1"
+    "react-native-text-ticker": "^1.0.0",
+    "react-navigation": "^3.12.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
