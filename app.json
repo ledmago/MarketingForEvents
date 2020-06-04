@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Marketing For Events",
-    "slug": "mfe2",
+    "name": "Marketing For Events V.4",
+    "slug": "mfe.v4",
     "platforms": [
       "ios",
       "android",
@@ -27,6 +27,7 @@
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
-    }
+    },
+    "description": ""
   }
 }

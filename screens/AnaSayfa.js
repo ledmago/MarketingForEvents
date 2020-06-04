@@ -12,6 +12,7 @@ import {
   Dimensions,
   ImageBackground,
   FlatList,
+  StatusBar,
   
 } from 'react-native';
 import Constants from 'expo-constants';
@@ -21,7 +22,6 @@ import { MonoText } from '../components/StyledText';
 import TextTicker from 'react-native-text-ticker'
 import Header from '../components/Header';
 import Menu, { MenuItem, MenuDivider, Position } from "react-native-enhanced-popup-menu";
-import StoryComponent from '../components/story';
  
 
 
@@ -78,7 +78,7 @@ class Anasayfa extends React.Component {
     <View style={styles.container}>
 
 <Header props2={this.props}/>
-   <StoryComponent/>
+   
     <ScrollView
       
       contentContainerStyle={styles.contentContainer}>
@@ -187,7 +187,7 @@ marginLeft:5,
     flex: 1,
     paddingBottom:20,
     //#121210
-    backgroundColor: '#212121',
+    backgroundColor: '#121212',
     marginTop:Constants.statusBarHeight,
   },
   tabbarLogoText: {

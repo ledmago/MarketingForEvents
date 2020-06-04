@@ -28,7 +28,6 @@ import { CheckBox } from 'react-native-elements';
 import Ripple from 'react-native-material-ripple';
 //import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { KeyboardAvoidingView } from 'react-native';
-// import firebase from '../components/Firebase';
 
 class Etkinlikler extends React.Component {
   constructor(props) {
@@ -56,36 +55,7 @@ class Etkinlikler extends React.Component {
 
 
 
-  _signInAsync = async () => {
-
-    var self = this;
-    this.setState({ buttonLoading: true, buttonText: false })
-
-
-    firebase.auth().signInWithEmailAndPassword(this.state.username, this.state.password).then(function (user) {
-      // Şifre Doğru İse
-      const thisUser = firebase.auth().currentUser;
-
-
-      AsyncStorage.setItem('userToken', thisUser.uid).then(function () {
-        self.props.navigation.navigate('Home');
-      })
-      self.setState({ buttonLoading: false, buttonText: true })
-
-
-    }).catch(function (error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-
-      Alert.alert('Şifre Yanlış', 'Şifre ve Kullanıcı Adı Uyuşmuyor.', [{ text: 'Tamam', },], { cancelable: false });
-      self.setState({ buttonLoading: false, buttonText: true })
-      // ...
-    });
-
-  };
-
-
+  
 
   render() {
     let textRef = React.createRef();
@@ -159,8 +129,8 @@ class Etkinlikler extends React.Component {
                   <Text style={styles.ButtonText}>Giriş</Text>
                 }
               </Ripple>
-              <View style={{ width: 75 + '%', alignItems: 'flex-start', marginTop: 20 }}>
-                <TouchableOpacity style={{ width: 75 + '%' }}><Text style={{ fontSize: 14, color: '#EBEBEB', }}>Şifremi Unuttum</Text></TouchableOpacity>
+              <View style={{ width: 75 + '%', alignItems: 'flex-start', marginTop: 20,alignSelf:'center' }}>
+                <TouchableOpacity style={{ width: 100 + '%', }}><Text style={{ fontSize: 14, color: '#EBEBEB',textAlign:'center' }}>Şifremi Unuttum</Text></TouchableOpacity>
 
                 <Ripple onPress={() => alert('Kardeşimm !!')}
 
@@ -241,13 +211,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#EBEBEB',
     color: '#000',
     height: 35,
-    width: 75 + '%',
+    width: 80 + '%',
     textAlign: 'left',
     fontSize: 16,
-    borderRadius: 2,
+    borderRadius: 5,
+    marginBottom:5,
 
-
-    paddingBottom: 5,
+    height:40,
+    alignContent:'center',
+    justifyContent:'center',
+    borderRadius:30,
+    textAlignVertical:'center',
     paddingLeft: 15,
     paddingRight: 15,
 
@@ -260,7 +234,6 @@ const styles = StyleSheet.create({
     width: 55 + '%',
     textAlign: 'center',
     fontSize: 19,
-
     marginTop: 20,
     paddingBottom: 5,
     paddingLeft: 10,
@@ -322,7 +295,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#5c3be0',
     borderRadius: 40,
     justifyContent: 'center',
-    marginTop: 15
+    marginTop: 15,
+    alignSelf:'center',
 
   },
   isletmeler:
